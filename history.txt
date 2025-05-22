@@ -1,0 +1,9 @@
+ mkdir docker-tp-a1
+ cd docker-tp-a1
+ # Création des fichiers (manuellement : Dockerfile, app.py, requirements.txt)
+ docker build -t franck-flask-app .
+ docker images
+ docker login
+ docker tag franck-flask-app franck/franck-flask-app:latest
+ docker push franck/franck-flask-app:latest
+ docker run -p 5001:5000 franck-flask-app
